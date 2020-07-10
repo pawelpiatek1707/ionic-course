@@ -41,7 +41,10 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-list>
+      
+          <ion-text *ngIf="items.length === 0">No items</ion-text>
+    
+        <ion-list *ngIf="items.length>0">
           <ion-item *ngFor="let item of items">
             <ion-text>{{item.reason}}: {{item.amount}}</ion-text>
           </ion-item>
