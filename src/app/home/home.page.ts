@@ -7,6 +7,21 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  items = [];
+
   constructor() {}
+
+  onClick(reason: string, amount: number) {
+      this.items.push({
+        reason: reason,
+        amount: amount
+      })
+      console.log(this.items)
+  }
+
+  onClear() {
+    this.items.length = 0;
+    console.log(this.items);
+  }
 
 }
